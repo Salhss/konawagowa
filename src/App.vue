@@ -1,31 +1,26 @@
 <template>
   <header>
     <img src="@/assets/konawa-logo.png" class="logo" />
-    <div
-      class="navbar-burger"
-      @click="isOpen = !isOpen"
-      :class="{ active: isOpen }"
-    >
-      <div class="line"></div>
-      <div class="line"></div>
-      <div class="line"></div>
-    </div>
-    <div class="menu-container">
-      <div class="navbar-menu">
-        <p>Beranda</p>
-        <p>Event</p>
-        <p>Partner Kami</p>
-        <p>Keunggulan</p>
+    <nav class="navbar-container">
+      <ul>
+        <li>Beranda</li>
+        <li>Event</li>
+        <li>Partner Kami</li>
+        <li>Keunggulan</li>
+      </ul>
+    </nav>
+    <div class="user-btn">
+      <div class="join-btn">
+        <JoinButton />
       </div>
+      <NavbarMobile :isOpen="isOpen" />
     </div>
-    
   </header>
-  
+
   <RouterView />
+
   <div class="bottom-btn">
-    <div class="btn-container">
-      <p>Join Komunitas Kami</p>
-    </div>
+    <JoinButton />
   </div>
 </template>
 
@@ -33,16 +28,74 @@
 import { ref } from "vue";
 import "./assets/colors.css";
 import { RouterLink, RouterView } from "vue-router";
+import NavbarMobile from "./components/layout/NavbarMobile.vue";
+import JoinButton from "./components/ui/JoinButton.vue";
 
 const isOpen = ref(false);
 </script>
 
 <style scoped>
-p {
-  font-family: "Inter", sans-serif;
+.bottom-btn {
+  display: none;
 }
 
-@media (min-width: 360px) {
+.navbar-container {
+  display: none;
+}
+
+@media (min-width: 1301px) {
+  .navbar-container ul {
+    gap: 22px;
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 1300px) {
+  .navbar-container ul {
+    gap: 22px;
+  }
+  .logo {
+    width: 70px;
+  }
+}
+
+@media (min-width: 913px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 15px;
+    padding-left: 30px;
+    position: sticky;
+    top: 0;
+    background-color: var(--white);
+  }
+  .navbar-container{
+    display: block;
+  }
+  .navbar-container ul {
+    display: flex;
+    list-style-type: none;
+    font-weight: 700;
+  }
+  .navbar-container li {
+    cursor: pointer;
+  }
+  .navbar-container li:hover {
+    color: var(--red);
+  }
+  .join-btn {
+    display: flex;
+    align-items: end;
+    justify-content: flex-end;
+    transition: all 200ms ease-in-out;
+  }
+  .join-btn:hover {
+    transform: translateY(5px);
+  }
+}
+
+@media (max-width: 912px) {
   header {
     padding-inline: 29px;
     padding-block: 12px;
@@ -54,62 +107,25 @@ p {
     background-color: var(--white);
   }
   .logo {
-    width: 70px;
     height: auto;
+    width: 60px;
   }
-  .line {
-    width: 35px;
-    height: 5.7px;
-    background-color: var(--red);
-    border-radius: 5px;
-  }
-  .navbar-burger {
+  .user-btn {
+    height: 50px;
     display: flex;
-    flex-direction: column;
-    gap: 3px;
+    justify-content: center;
+    align-items: center;
   }
-  .navbar-burger .line {
-    transition: all 300ms ease-in-out;
-  }
-  .navbar-burger.active .line:nth-child(1) {
-    transform: rotate(-45deg) translate(-6px, 6px);
-  }
-  .navbar-burger.active .line:nth-child(2) {
-    opacity: 0;
-  }
-  .navbar-burger.active .line:nth-child(3) {
-    transform: rotate(45deg) translate(-6px, -6px);
-  }
-  .navbar-burger + .menu-container {
-    transition: all 300ms ease-in-out;
-  }
-  .navbar-burger.active + .menu-container{
-    right: 0;
-  }
-  .menu-container {
-    position: absolute;
-    top: 100%;
-    width: 100%;
-    background-color: rgba(217, 217, 217, 0.7);
-    height: 100vh;
-    right: 100%;
-    z-index: 50;
-  }
-  .navbar-menu {
-    background-color: var(--white);
-    padding-inline: 48px;
-    height: fit-content;
+  .join-btn {
     display: flex;
-    flex-direction: column;
-    gap: 40px;
-    padding-bottom: 100px;
+    align-items: center;
+    height: 50px;
+    margin-right: 20px;
   }
-  .navbar-menu p {
-    text-align: right;
-    font-weight: 700;
-    font-size: 25px;
-    margin: 0;
-  }
+  
+}
+
+@media (max-width: 500px) {
   .bottom-btn {
     position: sticky;
     position: -webkit-sticky;
@@ -120,13 +136,8 @@ p {
     justify-content: center;
     align-items: center;
   }
-  .btn-container {
-    background-color: var(--red);
-    color: var(--white-gray);
-    font-weight: 700;
-    padding-inline: 18px;
-    border-radius: 5px;
-    box-shadow: 0px 4px  4px rgba(0, 0, 0, 0.25);
+  .join-btn {
+    display: none;
   }
 }
 </style>

@@ -7,6 +7,7 @@ import '../assets/colors.css'
     <div class="hero-banner">
       <img src="@/assets/images/hero-banner.jpeg" class="hero-image"/>
     </div>
+    
   </main>
 </template>
 
@@ -16,7 +17,9 @@ main {
   background-color: var(--red-default);
 }
 
-@media (min-width: 360px) {
+
+
+@media (max-width: 912px) {
   main {
     display: flex;
     flex-direction: column;
