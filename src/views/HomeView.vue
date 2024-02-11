@@ -1,69 +1,25 @@
-<script setup>
-import '../assets/colors.css'
+<script>
+import "../assets/colors.css";
+import Hero from "../components/home/hero.vue";
+export default {
+  name: "home",
+  components: { Hero },
+};
 </script>
 
 <template>
-  <main>
-    <div class="hero-banner">
-      <img src="@/assets/images/hero-banner.jpeg" class="hero-image"/>
-    </div>
-    
-  </main>
+  <div id="home">
+    <Hero />
+  </div>
 </template>
 
 <style scoped>
-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 26px;
-    padding-inline: 15px;
-    height: 100vh;
+#home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 26px;
+  padding-inline: 15px;
   background-color: var(--red-default);
-  }
-  .hero-banner {
-    width: 90%;
-    height: 400px;
-  }
-  .hero-image {
-    object-fit: cover;
-    object-position: center;
-    border-radius: 20px;
-    width: 100%;
-    height: 100%;
-  }
-
-@media (min-width: 913px) {
-  .hero-banner {
-    width: 70%;
-  }
-}
-
-@media (max-width: 912px) {
-  main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 26px;
-    padding-inline: 15px;
-  }
-  .hero-banner {
-    width: 90%;
-    height: 400px;
-  }
-  .hero-image {
-    object-fit: cover;
-    object-position: center;
-    border-radius: 20px;
-    width: 100%;
-    height: 100%;
-  }
-}
-
-@media (max-width: 430px) {
-  .hero-banner {
-    width: 100%;
-    height: 242px;
-  }
 }
 </style>
