@@ -99,12 +99,14 @@ export default {
   }
   .typed-container {
     background-color: var(--white-bone);
-    position: relative;
     width: 150px;
     height: 45px;
     border-radius: 5px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border: 1px rgba(0, 0, 0, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .type-text {
     display: flex;
@@ -112,7 +114,6 @@ export default {
   }
   .typed {
     color: var(--red-default) !important;
-    position: absolute;
     margin: 0;
   }
   .gowa {
@@ -162,9 +163,6 @@ export default {
     font-size: 20px !important;
     margin-top: 20px !important;
   }
-  .typed {
-    transform: translate(25%, -10%);
-  }
   .action-btn {
     margin-top: 40px;
   }
@@ -209,9 +207,6 @@ export default {
     margin-left: 8px;
     width: 135px;
   }
-  .typed {
-    transform: translate(50%);
-  }
   .action-btn {
     margin-top: 44px;
   }
@@ -254,11 +249,6 @@ export default {
   }
   .typed-container {
     margin-left: 10px;
-  }
-  .typed {
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -80%);
   }
 }
 
