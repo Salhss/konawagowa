@@ -274,5 +274,8 @@ export default {
   .agenda-btn p {
     font-size: 24px;
   }
+  .typed-container {
+    width: 130px;
+  }
 }
 </style>

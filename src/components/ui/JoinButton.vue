@@ -12,7 +12,7 @@ export default {
 
  .btn-container {
     background-color: var(--red);
-    color: var(--white-gray);
+    color: var(--white-grey);
     font-weight: 700;
     padding-inline: 18px;
     border-radius: 5px;

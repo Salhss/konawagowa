@@ -131,7 +131,7 @@ const isOpen = ref(false);
     position: -webkit-sticky;
     bottom: 0;
     height: 78px;
-    background-color: var(--white-gray);
+    background-color: var(--white-grey);
     display: flex;
     justify-content: center;
     align-items: center;

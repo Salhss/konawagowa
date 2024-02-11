@@ -1,15 +1,19 @@
 <script>
+import Hero from "@/components/home/Hero.vue";
+import Benefit from "@/components/home/Benefit.vue";
 import "../assets/colors.css";
-import Hero from "../components/home/hero.vue";
 export default {
   name: "home",
-  components: { Hero },
+  components: { Hero, Benefit },
 };
 </script>
 
 <template>
   <div id="home">
     <Hero />
+  </div>
+  <div id="benefit">
+    <Benefit />
   </div>
 </template>
 
