@@ -2,9 +2,10 @@
 import Hero from "@/components/home/Hero.vue";
 import Benefit from "@/components/home/Benefit.vue";
 import "../assets/colors.css";
+import JoinCommunity from "@/components/home/JoinCommunity.vue";
 export default {
   name: "home",
-  components: { Hero, Benefit },
+  components: { Hero, Benefit, JoinCommunity },
 };
 </script>
 
@@ -14,6 +15,9 @@ export default {
   </div>
   <div id="benefit">
     <Benefit />
+  </div>
+  <div id="join-community">
+    <JoinCommunity />
   </div>
 </template>
 
