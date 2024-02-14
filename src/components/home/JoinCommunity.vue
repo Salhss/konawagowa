@@ -183,7 +183,7 @@ export default {
 
 @media (max-width: 500px) {
   .promote-container {
-    margin-top: 52px;
+    margin-top: 80px;
     flex-direction: column;
   }
   .image-container {
