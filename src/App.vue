@@ -126,6 +126,15 @@ const isOpen = ref(false);
 }
 
 @media (max-width: 500px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background-color: var(--white);
+    z-index: 20;
+  }
   .bottom-btn {
     position: sticky;
     position: -webkit-sticky;
@@ -135,6 +144,7 @@ const isOpen = ref(false);
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 30;
   }
   .join-btn {
     display: none;
