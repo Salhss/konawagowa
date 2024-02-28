@@ -193,7 +193,7 @@ export default {
     display: flex;
     align-items: center;
     width: 100%;
-    overflow-x: scroll;
+    overflow-x: auto;
 }
 .event-card {
   border: solid 1px var(--red-default);
@@ -259,17 +259,17 @@ export default {
         cursor: pointer;
     }
     .image-container {
-        width: 321px;
-        height: 260px;
+        width: 247px;
+        height: 211px;
     }
     .pin-location {
-        width: 40px;
+        width: 32px;
     }
     .category-date {
         margin-block: 12px;
     }
     .category-date p, .event-location {
-        font-size: 20px;
+        font-size: 16px;
     }
     .category-event {
         border-radius: 5px;
@@ -283,7 +283,7 @@ export default {
         margin-top: 20px;
     }
     .register-btn {
-        font-size: 32px;
+        font-size: 20px;
         width: 100%;
         border-radius: 10px;
         padding-block: 8px;

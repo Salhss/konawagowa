@@ -4,9 +4,10 @@ import Benefit from "@/components/home/Benefit.vue";
 import "../assets/colors.css";
 import JoinCommunity from "@/components/home/JoinCommunity.vue";
 import Events from "@/components/home/Events.vue";
+import Galery from "@/components/home/Galery.vue";
 export default {
   name: "home",
-  components: { Hero, Benefit, JoinCommunity, Events },
+  components: { Hero, Benefit, JoinCommunity, Events, Galery },
 };
 </script>
 
@@ -22,6 +23,9 @@ export default {
   </div>
   <div id="events">
     <Events />
+  </div>
+  <div id="galery">
+    <Galery />
   </div>
 </template>
 
